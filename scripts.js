@@ -6,8 +6,19 @@ let products = [
 ];
 
 // Affichage des produits
+let products = [];
+
+fetch('products.json')
+    .then(response => response.json())
+    .then(data => {
+        products = data;
+        displayProducts();
+    })
+    .catch(error => console.error('Erreur de chargement des produits:', error));
+
 function displayProducts() {
     let productContainer = document.getElementById("products");
+    productContainer.innerHTML = "";
     products.forEach(product => {
         let div = document.createElement("div");
         div.classList.add("product");
@@ -19,6 +30,7 @@ function displayProducts() {
         `;
         productContainer.appendChild(div);
     });
+}
 }
 
 // Ajouter au panier
