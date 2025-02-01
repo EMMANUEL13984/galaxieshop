@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALAXIESHOP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GALAXIESHOP</h1>
+        <button id="cart-btn">🛒 Panier (<span id="cart-count">0</span>)</button>
+    </header>
+
+    <section class="banner">
+        <h2>Bienvenue sur GALAXIESHOP</h2>
+        <p>Livraison gratuite, même en Haïti !</p>
+    </section>
+
+    <section id="categories">
+        <button class="category-btn">Vêtements</button>
+        <button class="category-btn">Chaussures</button>
+        <button class="category-btn">Bijoux</button>
+        <button class="category-btn">Cheveux</button>
+        <button class="category-btn">Électronique</button>
+    </section>
+
+    <section id="products">
+        <!-- Produits ajoutés dynamiquement -->
+    </section>
+
+    <div id="cart">
+        <h2>Panier</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: <span id="cart-total">0</span> €</p>
+        <button id="pay-btn">Payer</button>
+    </div>
+
+    <div id="order-tracking">
+        <h2>Suivi de Commande</h2>
+        <p id="tracking-status">Aucune commande en cours</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+</body>
+</html>
